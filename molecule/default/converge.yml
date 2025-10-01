@@ -1,3 +1,4 @@
+---
 - name: Fail if molecule group is missing
   hosts: localhost
   tasks:
