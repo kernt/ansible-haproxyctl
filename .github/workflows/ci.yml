@@ -42,9 +42,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - distro: debian12
           - distro: ubuntu2404
             ansible-version: '>=2.10, <2.11'
+            python-version: '3.12'
 
     steps:
       - name: Check out the codebase
@@ -55,7 +55,7 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
       - name: Install test dependencies
         run: pip install 'ansible${{ matrix.ansible-version }}' molecule-plugins[docker] docker
