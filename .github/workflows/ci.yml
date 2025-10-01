@@ -43,7 +43,7 @@ jobs:
       matrix:
         include:
           - distro: rockylinux9
-            ansible-version: '2.17.13'
+            ansible-version: '2.19.2'
             python-version: '3.13'
 
     steps:
