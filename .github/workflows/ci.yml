@@ -31,7 +31,7 @@ jobs:
 
   molecule:
     name: Molecule
-    runs-on: rockylinux9
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: "${{ github.repository }}"
