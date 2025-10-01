@@ -10,7 +10,7 @@ name: CI
 jobs:
   lint:
     name: Lint
-    runs-on: rockylinux9
+    runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v3
