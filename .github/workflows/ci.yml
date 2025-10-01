@@ -10,7 +10,7 @@ name: CI
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: rockylinux9
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v3
@@ -23,7 +23,6 @@ jobs:
       - name: Install test dependencies
         run: |
           pip install ansible-lint
-          ansible-galaxy install -r requirements.txt
 
       - name: Lint code
         run: |
@@ -32,7 +31,7 @@ jobs:
 
   molecule:
     name: Molecule
-    runs-on: ubuntu-latest
+    runs-on: rockylinux9
     defaults:
       run:
         working-directory: "${{ github.repository }}"
